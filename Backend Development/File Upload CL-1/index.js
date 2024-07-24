@@ -17,7 +17,7 @@ require("./config/database").connect();
 //connect with cloud
 const cloudinary = require("./config/cloudinary");
 //const { cloudinaryConnect } = require("./config/cloudinary");
-cloudinaryConnect();
+cloudinary.cloudinaryConnect();
 
 
 //import routes
