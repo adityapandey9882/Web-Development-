@@ -8,14 +8,15 @@ exports.localFileUpload = async (req,res) => {
         const file = req.files.file;
         console.log("FILE AAGYI JEE ->", file)
 
-        //In Which path of server you want to store  // __dirname(current directory) like controller is current directory
+        //create path of server where file  need to stored on server  // __dirname(current directory) like controller is current directory
         let path = __dirname +"/files/" + Date.now() + `.${file.name.split('.')[1]}`; //It is a server path where i want to store
         console.log("PATH-> ", path)
 
-        //move file to this path 
+        //move file to this path    //add path to the move function
         file.mv(path , (err) =>{
         });
 
+        //create a successful response
         res.json({
             success:true, 
             message:'Local File Uploaded Successfully'
