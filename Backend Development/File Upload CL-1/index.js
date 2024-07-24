@@ -15,8 +15,8 @@ app.use(fileupload());
 require("./config/database").connect();
 
 //connect with cloud
-const cloudinary = require("./config/database");
-const { cloudinaryConnect } = require("./config/cloudinary");
+const cloudinary = require("./config/cloudinary");
+//const { cloudinaryConnect } = require("./config/cloudinary");
 cloudinaryConnect();
 
 
@@ -25,7 +25,7 @@ const FileUpload = require("./routes/FileUpload");
 //api route mount 
 app.use("/api/v1/upload", FileUpload);
 
-
+//activate server
 app.listen(PORT, () =>{
     console.log(`App running successfully a Port no ${PORT}`)
 })
