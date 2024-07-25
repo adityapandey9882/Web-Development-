@@ -18,7 +18,7 @@
   6. cloudinary: Cloudinary is a cloud-based service that provides solutions for managing, storing, optimizing, and delivering images and 
               videos for web and mobile application.
 
-# Pre/Post middleware- Pre and post middleware in Mongoose are used to define hooks that run before or after certain operations on documents in a MongoDB collection. write in models/File.js like sending email when record mentioned in db.
+# Pre/Post middleware- Pre and post middleware in Mongoose are used to define hooks that run before or after certain operations on documents in a MongoDB collection. write in models/File.js like sending email after certain operation.
     mongoose ->middleware 
     * Pre middleware - Pre middleware functions are executed one after another, when each middleware calls next.
       syntax -
