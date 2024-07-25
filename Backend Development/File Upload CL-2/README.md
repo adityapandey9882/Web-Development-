@@ -6,15 +6,16 @@
   5. create folder - models, controllers, config, routes
 
 # All installed package to create file Upload Backend Project 
-  express.js: To create server and activate the server at any port No.
-  dotenv: dotenv package is used to load environment variables from a .env file into the environment, useful for managing configuration 
+  1. express.js: To create server and activate the server at any port No.
+  2. dotenv: dotenv package is used to load environment variables from a .env file into the environment, useful for managing configuration 
           settings and sensitive information such as API keys, database credentials, PORT NO and other configuration data.
-  nodemon: nodemon package is a tool used in Node.js development to automatically restart the server when changes are detected in the source files.
-  mongoose: mongoose package is an Object Data Modeling (ODM) library for MongoDB and Node.js. Mongoose facilitates the connection and 
+  3. nodemon: nodemon package is a tool used in Node.js development to automatically restart the server when changes are detected in the 
+             source    files.
+  4. mongoose: mongoose package is an Object Data Modeling (ODM) library for MongoDB and Node.js. Mongoose facilitates the connection and 
             interaction between an application and the database.
-  express-fileupload or Multer: express-fileupload is a simple, lightweight middleware that provides easy handling of file uploads in an 
+  5. express-fileupload or Multer: express-fileupload is a simple, lightweight middleware that provides easy handling of file uploads in an 
                   Express application , multer is a more feature-rich and flexible middleware for handling file uploads. It is designed to handle multipart/form-data, which is commonly used for file uploads. multer allows for more control over file storage, validation, and handling.
-  cloudinary: Cloudinary is a cloud-based service that provides solutions for managing, storing, optimizing, and delivering images and 
+  6. cloudinary: Cloudinary is a cloud-based service that provides solutions for managing, storing, optimizing, and delivering images and 
               videos for web and mobile application.
 
 # Pre/Post middleware- Pre and post middleware in Mongoose are used to define hooks that run before or after certain operations on documents in a MongoDB collection. write in models/File.js like sending email when record mentioned in db.
