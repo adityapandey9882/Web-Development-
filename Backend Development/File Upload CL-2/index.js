@@ -1,0 +1,38 @@
+const express = require("express");
+const app = express();
+
+require("dotenv").config();
+const PORT = process.env.PORT || 3000
+
+//middleware to interact with JSON file
+app.use(express.json());
+
+//simple express middleware for uplaoding files.
+const fileupload = require("express-fileupload");
+app.use(fileupload({
+    useTempFiles : true,    //flag 
+    tempFileDir : '/tmp'
+})); 
+
+//connect with Database
+require("./config/database").connect();
+
+//connect with cloud
+const cloudinary = require("./config/cloudinary");
+//const { cloudinaryConnect } = require("./config/cloudinary");
+cloudinary.cloudinaryConnect();
+
+
+//import routes
+const FileUpload = require("./routes/FileUpload");
+//api route mount 
+app.use("/api/v1/upload", FileUpload);
+
+//activate server
+app.listen(PORT, () =>{
+    console.log(`App running successfully a Port no ${PORT}`)
+})
+
+app.get("/", (req, res) =>{
+    res.send("This is the home page")
+})
